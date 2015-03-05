@@ -1,0 +1,25 @@
+{
+  "name": "paypal-ipn-listner",
+  "private": true,
+  "version": "0.0.1",
+  "description": "A simple Paypal IPN listener written in Node.js",
+  "author": "Mehdi via Freelancer <mhasan@omicronlab.com.com>",
+  "dependencies": {
+    "express": ">= 3.4.8",
+    "request": ">= 2.31.0",
+    "body-parser": "latest",
+    "colors": ">= 0.6.2"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "paypal",
+    "IPN",
+    "listner"
+  ],
+  "engines": {
+    "node": ">=0.10"
+  }
+}
