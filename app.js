@@ -18,14 +18,13 @@ colors.setTheme({
 });
 
 var app = express();
-//app.use(express.bodyParser());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/', function(req, res){
+app.get('/', function (req, res) {
     res.end('Response will be available on console, nothing to look here!');
 });
 
-app.post('/', function(req, res){
+app.post('/', function (req, res) {
     console.log('Received POST /'.bold);
     console.log(req.body);
     console.log('\n\n');
@@ -65,8 +64,9 @@ app.post('/', function(req, res){
         if (!error && response.statusCode === 200) {
 
             // inspect IPN validation result and act accordingly
+            console.log('body:' + body);
 
-            if (body.substring(0, 8) === 'VERIFIED'){
+            if (body.substring(0, 8) === 'VERIFIED') {
                 // The IPN is verified, process it
                 console.log('Verified IPN!'.green);
                 console.log('\n\n');
